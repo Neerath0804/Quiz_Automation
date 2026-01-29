@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Customize Your Quiz</h2>
+
+  <label>Category</label>
+  <select id="category">
+    <option value="Math">Math</option>
+    <option value="Logic">Logic</option>
+  </select>
+
+  <label>Difficulty</label>
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<script>
+function startQuiz() {
+  localStorage.setItem("category", category.value);
+  localStorage.setItem("difficulty", difficulty.value);
+  window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>
